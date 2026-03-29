@@ -1,0 +1,22 @@
+﻿23:13:30  Running with dbt=1.11.7
+23:13:31  Registered adapter: snowflake=1.11.3
+23:13:31  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.aws_dbt_snowflake_project.ephemeral
+23:13:32  Found 8 models, 4 analyses, 1 snapshot, 3 sources, 526 macros
+23:13:32  
+23:13:32  Concurrency: 1 threads (target='dev')
+23:13:32  
+23:13:36  1 of 1 START snapshot AIRBNB.gold.dim_bookings ................................. [RUN]
+23:13:38  1 of 1 ERROR snapshotting AIRBNB.gold.dim_bookings ............................. [ERROR in 1.64s]
+23:13:39  
+23:13:39  Finished running 1 snapshot in 0 hours 0 minutes and 7.49 seconds (7.49s).
+23:13:39  
+23:13:39  Completed with 1 error, 0 partial successes, and 0 warnings:
+23:13:39  
+23:13:39  Failure in snapshot dim_bookings (snapshots\dim_bookings.sql)
+23:13:39    Database Error in snapshot dim_bookings (snapshots\dim_bookings.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 31 at position 0 unexpected ')'.
+23:13:39  
+23:13:39  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1

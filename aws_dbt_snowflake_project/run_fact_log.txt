@@ -1,0 +1,25 @@
+﻿16:52:56  Running with dbt=1.11.7
+16:52:57  Registered adapter: snowflake=1.11.3
+16:52:58  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.aws_dbt_snowflake_project.ephemeral
+16:52:58  Found 11 models, 4 analyses, 3 snapshots, 3 sources, 526 macros
+16:52:58  
+16:52:58  Concurrency: 1 threads (target='dev')
+16:52:58  
+16:53:03  1 of 1 START sql table model gold.fact ......................................... [RUN]
+16:53:04  1 of 1 ERROR creating sql table model gold.fact ................................ [ERROR in 0.88s]
+16:53:05  
+16:53:05  Finished running 1 table model in 0 hours 0 minutes and 7.46 seconds (7.46s).
+16:53:05  
+16:53:05  Completed with 1 error, 0 partial successes, and 0 warnings:
+16:53:05  
+16:53:05  Failure in model fact (models\gold\fact.sql)
+16:53:05    Database Error in model fact (models\gold\fact.sql)
+  000904 (42000): SQL compilation error: error line 10 at position 90
+  invalid identifier 'GOLD_OBT.SERVICE_FEE'
+  compiled code at target\run\aws_dbt_snowflake_project\models\gold\fact.sql
+16:53:05  
+16:53:05    compiled code at target\compiled\aws_dbt_snowflake_project\models\gold\fact.sql
+16:53:05  
+16:53:05  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1

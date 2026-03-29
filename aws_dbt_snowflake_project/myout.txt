@@ -1,0 +1,22 @@
+﻿22:20:01  Running with dbt=1.11.7
+22:20:02  Registered adapter: snowflake=1.11.3
+22:20:02  Found 7 models, 4 analyses, 3 sources, 526 macros
+22:20:02  
+22:20:02  Concurrency: 1 threads (target='dev')
+22:20:02  
+22:20:07  1 of 1 START sql table model gold.obt .......................................... [RUN]
+22:20:09  1 of 1 ERROR creating sql table model gold.obt ................................. [ERROR in 2.15s]
+22:20:10  
+22:20:10  Finished running 1 table model in 0 hours 0 minutes and 7.86 seconds (7.86s).
+22:20:10  
+22:20:10  Completed with 1 error, 0 partial successes, and 0 warnings:
+22:20:10  
+22:20:10  Failure in model obt (models\gold\obt.sql)
+22:20:10    Database Error in model obt (models\gold\obt.sql)
+  000904 (42000): SQL compilation error: error line 13 at position 291
+  invalid identifier 'SILVER_LISTINGS.CREATED_AT'
+  compiled code at target\run\aws_dbt_snowflake_project\models\gold\obt.sql
+22:20:10  
+22:20:10    compiled code at target\compiled\aws_dbt_snowflake_project\models\gold\obt.sql
+22:20:10  
+22:20:10  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
